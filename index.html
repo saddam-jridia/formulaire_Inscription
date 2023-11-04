@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>S'inscrire</title>
+    <link rel="stylesheet" href="css/registration.css" />
+    <script src="js/validate.js"></script>
+</head>
+<body>
+    <section>
+        <h1>Lorem ipsum dolor sit.</h1>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero doloremque sint repellendus officia? Dolor, sunt ea sed quod, animi ab inventore optio eum perspiciatis nostrum eveniet! Accusamus maiores ex architecto?</p>
+        <form action="merci.html" method="post" id="frmRegistration" novalidate>
+            <fieldset>
+                <legend>Informations personnelles</legend>
+                <div class="text">
+                    <label for="fName">Votre prénom</label>
+                    <input type="text" name="fName" id="fName" placeholder="Votre prénom" required title="Le prénom est une information requise." />
+                </div>
+                <div class="text">
+                    <label for="lName">Votre nom de famille</label>
+                    <input type="text" name="lName" id="lName" placeholder="Votre nom de famille" required />
+                </div>
+                <div class="text">
+                    <label for="dob">Votre date de naissance</label>
+                    <input type="date" name="dob" id="dob" placeholder="Votre date de naissance" required />
+                </div>
+                <div class="text">
+                    <label for="email">Votre adresse email</label>
+                    <input type="email" name="email" id="email" placeholder="Votre adresse email" required />
+                </div>
+                <div class="text">
+                    <label for="tel">Votre numéro de téléphone</label>
+                    <input type="tel" name="tel" id="tel" placeholder="Votre numéro de téléphone" />
+                </div>
+                <div class="text">
+                    <label for="web">Votre site web</label>
+                    <input type="url" name="web" id="web" placeholder="Votre site web" />
+                </div>
+                <div class="select">
+                    <label for="country">Votre nationalité</label>
+                    <select name="country" id="country">
+                        <option>-- Choisissez votre pays --</option>
+                        <option value="CH">Algérie</option>
+                        <option value="BE">Belgique</option>
+                        <option value="CA">Canada</option>
+                        <option value="FR">France</option>
+                        <option value="CH">Suisse</option>
+                        <option value="CH">Tunisie</option>
+                    </select>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Votre compte</legend>
+                <div class="text">
+                    <label for="username">Choisissez un nom d'utilisateur</label>
+                    <input type="text" name="username" id="username" placeholder="Choisissez un nom d'utilisateur" required maxlength="12" />
+                </div>
+                <div class="text">
+                    <label for="password1">Choisissez votre mot de passe</label>
+                    <input type="password" name="password1" id="password1" placeholder="Choisissez votre mot de passe" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$" title="Votre mot de passe doit contenir au moins une lettre majuscule, une lettre minuscule et un chiffre et doit être composé de 6 caractères au minimum." />
+                </div>
+                <div class="text">
+                    <label for="password2">Répétez votre mot de passe</label>
+                    <input type="password" name="password2" id="password2" placeholder="Répétez votre mot de passe" pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).{6,}$" title="Votre mot de passe doit contenir au moins une lettre majuscule, une lettre minuscule et un chiffre et doit être composé de 6 caractères au minimum." />
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Vos options</legend>
+                <div>
+                    <p>Votre plan tarifaire</p>
+                    <div class="radios">
+                        <label><input type="radio" name="subsciption" value="free" checked /><span>Gratuit</span></label>
+                        <label><input type="radio" name="subsciption" value="basic" /><span>Basic (4,99 €)</span></label>
+                        <label><input type="radio" name="subsciption" value="pro" /><span>Pro (14,99 €)</span></label>
+                        <label><input type="radio" name="subsciption" value="platinum" /><span>Platinum (34,99 €)</span></label>
+                    </div>
+                </div>
+                <div>
+                    <p>Vos centres d'intérêt</p>
+                    <div class="checkboxes">
+                        <label><input type="checkbox" name="interests" value="garden" /><span>Jardinage</span></label>
+                        <label><input type="checkbox" name="interests" value="music" /><span>Musique</span></label>
+                        <label><input type="checkbox" name="interests" value="cooking" /><span>Cuisine</span></label>
+                        <label><input type="checkbox" name="interests" value="tech" /><span>Technologie</span></label>
+                        <label><input type="checkbox" name="interests" value="travel" /><span>Voyages</span></label>
+                        <label><input type="checkbox" name="interests" value="photography" /><span>Photographie</span></label>
+                        <label><input type="checkbox" name="interests" value="cars" /><span>Voitures</span></label>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Envoyer</legend>
+                <div class="checkboxes">
+                    <label><input id="terms" type="checkbox" name="terms" value="yes" required /><span>J'accepte les termes et conditions</span></label>
+                </div>
+                <div class="button">
+                    <button type="submit">S'inscrire</button>
+                </div>
+            </fieldset>
+        </form>
+    </section>
+</body>
+</html>
